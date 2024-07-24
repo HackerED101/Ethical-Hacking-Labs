@@ -24,7 +24,9 @@
      ```
    - You should see `CEH` listed among the workspaces, indicating it has been created and is active.
 
-5. **Set Target Domain:**
+### Setting target domain exploring marketplace
+
+1. **Set Target Domain:**
    - Once inside Recon-ng, you need to set the target domain for network reconnaissance. Replace `example.com` with your actual target domain:
      ```bash
      >db insert domains
@@ -34,4 +36,43 @@
      ```bash
      show domains
      ```
-    
+
+2. **Load Modules from the Marketplace:**
+   - Recon-ng offers various modules through its marketplace for specific reconnaissance tasks. Here’s how you can load and use them:
+   
+     a. **List Available Modules:**
+        - To list all available modules in the marketplace, use:
+          ```bash
+          marketplace search
+          ```
+        - This command displays a list of modules categorized by different types of reconnaissance activities.
+
+     b. **Load a Specific Module:**
+        - Choose a module relevant to your network reconnaissance needs. For example, we will use the hackertarget module in this tutorial:
+          ```bash
+          marketplace install hackertarget
+          ```
+          This command installs the `hackertarget` module which can be used to gather subdomains related to the specified domain.
+
+3. **Set Target Domain:**
+   - After loading the module, set the target domain for reconnaissance. Replace `certifiedhacker.com` with any target domain:
+     ```bash
+     options set SOURCE certifiedhacker.com
+     ```
+     - This command sets `certifiedhacker.com` as the target domain for the loaded module.
+
+4. **Run the Module:**
+   - Execute the module to perform reconnaissance on the target domain:
+     ```bash
+     run
+     ```
+     - This command starts the module and gathers information based on its functionality.
+
+5. **Review Results:**
+   - Recon-ng will display results based on the module's execution. Results might include subdomains, IP addresses, URLs, or other relevant information retrieved from the target domain.
+
+### Additional Notes:
+- **Explore Marketplace:** The Recon-ng marketplace offers a wide range of modules beyond basic domain and host reconnaissance. Explore modules tailored to your specific reconnaissance objectives.
+- **Module Customization:** Each module may have specific options and configurations that can be customized using `options set` before running `run`.
+- **Documentation:** Refer to Recon-ng's official documentation for detailed information on available modules and their usage.
+- **Output:** If your response is working correctly but with messy queries and values, just type show hosts for a clean output
