@@ -208,12 +208,11 @@ This module gathers personal information associated with a domain using WHOIS da
    modules load recon/domains-contacts/whois_pocs
    ```
    
-   - Set the target username:
+- Replace `MarkZuckerberg` with the username you want to target.
    ```bash
    options set SOURCE MarkZuckerberg
-             ```
-
-   - Run the module:
+   ```
+   - Execute the module to perform the operation:
    ```bash
    run
    ```
