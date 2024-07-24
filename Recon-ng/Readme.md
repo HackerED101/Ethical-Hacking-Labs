@@ -123,30 +123,35 @@
 - We will install reporting module from marketplace:
   
    ```bash
-          marketplace install reporting/html
+   marketplace install reporting/html
           ```
+   
 ```bash
-          modules load reporting/html
+   modules load reporting/html
           ```
+
 - This will load that module, without loading you will be unable to use it.
    
 - You can create a report in several formats, you can check the marketplace for supported formats.
 - You will need to assign the following values: Creator,Customer, Filename
-   ```bash
-          Options set CREATOR <yourname>
-          ```
+
 ```bash
-          Options set CUSTOMER <yourcustomername>
+Options set CREATOR <yourname>
           ```
 
 ```bash
-          Options set FILENAME home/kali/Desktop/Filename
+Options set CUSTOMER <yourcustomername>
+          ```
+
+```bash
+Options set FILENAME home/kali/Desktop/Filename
           ```
 
 **Run the Module:**
    - Execute the module to generate a report:
+
     ```bash
-          run
+ run
           ```
 
  ### Recon-ng for gathering personal information
