@@ -118,64 +118,78 @@
      ```
      - This command starts the module and gathers information based on its functionality.
 
-### Generating a report
-- Now that you have collected your data, You can create a report conataining all the information
-- We will install reporting module from marketplace:
-  
+Certainly! Here's how you can format the instructions in GitHub Markdown format for your README file:
+
+---
+
+### Generating a Report
+
+Now that you have collected your data, you can create a report containing all the information.
+
+1. **Install Reporting Module from Marketplace:**
    ```bash
    marketplace install reporting/html
-          ```
+   ```
    
-```bash
+2. **Load HTML Reporting Module:**
+   ```bash
    modules load reporting/html
-          ```
+   ```
+   - This loads the HTML reporting module. Without loading it, you won't be able to use it.
 
-- This will load that module, without loading you will be unable to use it.
-   
-- You can create a report in several formats, you can check the marketplace for supported formats.
-- You will need to assign the following values: Creator,Customer, Filename
+3. **Select Report Format:**
+   - You can create a report in several formats. Check the marketplace for supported formats.
 
-```bash
-Options set CREATOR <yourname>
-          ```
+4. **Assign Required Values:**
+   ```bash
+   options set CREATOR <yourname>
+   ```
+   ```bash
+   options set CUSTOMER <yourcustomername>
+   ```
+   ```bash
+   options set FILENAME /home/kali/Desktop/Filename
+   ```
+   - Replace `<yourname>`, `<yourcustomername>`, and `/home/kali/Desktop/Filename` with appropriate values. `FILENAME` should specify the full path where you want to save the report.
 
-```bash
-Options set CUSTOMER <yourcustomername>
-          ```
+5. **Run the Module:**
+   - Execute the module to generate the report:
+   ```bash
+   run
+   ```
 
-```bash
-Options set FILENAME home/kali/Desktop/Filename
-          ```
 
-**Run the Module:**
-   - Execute the module to generate a report:
+### Recon-ng for Gathering Personal Information
 
-    ```bash
- run
-          ```
+#### Gather Contacts Associated with a Domain
 
- ### Recon-ng for gathering personal information
-     
-**Gather contacts associated with a domain:**
-- This module will use wohis data and gather all the personal information of a domain.
-  
-     ```bash
-          marketplace install recon/domains-contacts/whois_pocs
-          ```
-       ```bash
-          modules load recon/domains-contacts/whois_pocs
-          ```
+This module gathers personal information associated with a domain using WHOIS data.
 
-     - Check the information to run the module:
-          ```bash
-          info
-          ```
+1. **Install WHOIS Contacts Module:**
+   ```bash
+   marketplace install recon/domains-contacts/whois_pocs
+   ```
 
-      - After loading the module, set the target domain for whois. Replace `facebook.com` with any target domain:
-     ```bash
-     options set SOURCE facebook.com
-     
-   - Execute the module:
-    ```bash
-          run
-          ```
+2. **Load WHOIS Contacts Module:**
+   ```bash
+   modules load recon/domains-contacts/whois_pocs
+   ```
+
+3. **Check Module Information:**
+   - Verify the module's information and options before running:
+   ```bash
+   info
+   ```
+
+4. **Set Target Domain for WHOIS Lookup:**
+   - Set the target domain for WHOIS lookup. Replace `facebook.com` with your target domain:
+   ```bash
+   options set SOURCE facebook.com
+   ```
+
+5. **Execute the Module:**
+   - Run the module to gather WHOIS contact information:
+   ```bash
+   run
+   ```
+
