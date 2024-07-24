@@ -24,13 +24,14 @@
      ```
    - You should see `CEH` listed among the workspaces, indicating it has been created and is active.
 
-To add a target domain and perform network reconnaissance using Recon-ng, you can extend the existing instructions in your GitHub README file. Here’s how you can do it:
-
 5. **Set Target Domain:**
    - Once inside Recon-ng, you need to set the target domain for network reconnaissance. Replace `example.com` with your actual target domain:
      ```bash
      >db insert domains
      >certifiedhacker.com
      ```
-    
+   - You can view the added the domain by typing:   
+     ```bash
+     show domains
+     ```
     
