@@ -82,31 +82,31 @@
 - **Documentation:** Refer to Recon-ng's official documentation for detailed information on available modules and their usage. 
 - **Output:** If your response is working correctly but with messy queries and values, just type show hosts for a clean output
 
-- 6. **Load brute_hosts from the Marketplace:**
+ 6. **Load brute_hosts from the Marketplace:**
      
      a. **Load a Specific Module:**
      - To install and use another module, you have to exit the first one:
           ```bash
           back
           ```
-        - Choose a module relevant to your network reconnaissance needs.We will use brute_hosts module in this tutorial:
+ - Choose a module relevant to your network reconnaissance needs.We will use brute_hosts module in this tutorial:
           ```bash
           marketplace install recon/domains-hosts/brute_hosts
           ```
-          This command installs the `brute_hosts` module which can be used to brute force subdomains related to the specified domain.
+- This command installs the `brute_hosts` module which can be used to brute force subdomains related to the specified domain.
 
             ```bash
           modules load recon/domains-hosts/brute_hosts
           ```
-          This will load that module, without loading you will be unable to use it.
+- This will load that module, without loading you will be unable to use it.
 
 7. **Set Target Domain:**
    - After loading the module, set the target domain for reconnaissance. Replace `certifiedhacker.com` with any target domain:
      ```bash
      options set SOURCE certifiedhacker.com
      ```
-     - This command sets `certifiedhacker.com` as the target domain for the loaded module.
-     - You can source and wordlists by writing following command:
+- This command sets `certifiedhacker.com` as the target domain for the loaded module.
+- You can source and wordlists by writing following command:
      ```bash
      info
      ```
@@ -124,22 +124,24 @@
    ```bash
           marketplace install reporting/html
           ```
-       ```bash
+```bash
           modules load reporting/html
           ```
-          This will load that module, without loading you will be unable to use it.
+- This will load that module, without loading you will be unable to use it.
    
 - You can create a report in several formats, you can check the marketplace for supported formats.
 - You will need to assign the following values: Creator,Customer, Filename
    ```bash
           Options set CREATOR <yourname>
           ```
-   ```bash
+```bash
           Options set CUSTOMER <yourcustomername>
           ```
-   ```bash
+
+```bash
           Options set FILENAME home/kali/Desktop/Filename
           ```
+
 **Run the Module:**
    - Execute the module to generate a report:
     ```bash
