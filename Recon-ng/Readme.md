@@ -54,6 +54,11 @@
           ```
           This command installs the `hackertarget` module which can be used to gather subdomains related to the specified domain.
 
+          ```bash
+          modules load hackertarget
+          ```
+          This will load that module, without loading you will be unable to use it.
+
 3. **Set Target Domain:**
    - After loading the module, set the target domain for reconnaissance. Replace `certifiedhacker.com` with any target domain:
      ```bash
@@ -74,5 +79,95 @@
 ### Additional Notes:
 - **Explore Marketplace:** The Recon-ng marketplace offers a wide range of modules beyond basic domain and host reconnaissance. Explore modules tailored to your specific reconnaissance objectives.
 - **Module Customization:** Each module may have specific options and configurations that can be customized using `options set` before running `run`.
-- **Documentation:** Refer to Recon-ng's official documentation for detailed information on available modules and their usage.
+- **Documentation:** Refer to Recon-ng's official documentation for detailed information on available modules and their usage. 
 - **Output:** If your response is working correctly but with messy queries and values, just type show hosts for a clean output
+
+- 6. **Load brute_hosts from the Marketplace:**
+     
+     a. **Load a Specific Module:**
+     - To install and use another module, you have to exit the first one:
+          ```bash
+          back
+          ```
+        - Choose a module relevant to your network reconnaissance needs.We will use brute_hosts module in this tutorial:
+          ```bash
+          marketplace install recon/domains-hosts/brute_hosts
+          ```
+          This command installs the `brute_hosts` module which can be used to brute force subdomains related to the specified domain.
+
+            ```bash
+          modules load recon/domains-hosts/brute_hosts
+          ```
+          This will load that module, without loading you will be unable to use it.
+
+7. **Set Target Domain:**
+   - After loading the module, set the target domain for reconnaissance. Replace `certifiedhacker.com` with any target domain:
+     ```bash
+     options set SOURCE certifiedhacker.com
+     ```
+     - This command sets `certifiedhacker.com` as the target domain for the loaded module.
+     - You can source and wordlists by writing following command:
+     ```bash
+     info
+     ```
+
+8. **Run the Module:**
+   - Execute the module to perform reconnaissance on the target domain:
+     ```bash
+     run
+     ```
+     - This command starts the module and gathers information based on its functionality.
+
+### Generating a report
+- Now that you have collected your data, You can create a report conataining all the information
+- We will install reporting module from marketplace:
+   ```bash
+          marketplace install reporting/html
+          ```
+       ```bash
+          modules load reporting/html
+          ```
+          This will load that module, without loading you will be unable to use it.
+   
+- You can create a report in several formats, you can check the marketplace for supported formats.
+- You will need to assign the following values: Creator,Customer, Filename
+   ```bash
+          Options set CREATOR <yourname>
+          ```
+   ```bash
+          Options set CUSTOMER <yourcustomername>
+          ```
+   ```bash
+          Options set FILENAME home/kali/Desktop/Filename
+          ```
+**Run the Module:**
+   - Execute the module to generate a report:
+    ```bash
+          run
+          ```
+
+ ### Recon-ng for gathering personal information
+     
+**Gather contacts associated with a domain:**
+- This module will use wohis data and gather all the personal information of a domain.
+  
+     ```bash
+          marketplace install recon/domains-contacts/whois_pocs
+          ```
+       ```bash
+          modules load recon/domains-contacts/whois_pocs
+          ```
+
+     - Check the information to run the module:
+          ```bash
+          info
+          ```
+
+      - After loading the module, set the target domain for whois. Replace `facebook.com` with any target domain:
+     ```bash
+     options set SOURCE facebook.com
+     
+   - Execute the module:
+    ```bash
+          run
+          ```
