@@ -121,6 +121,7 @@
 ### Generating a report
 - Now that you have collected your data, You can create a report conataining all the information
 - We will install reporting module from marketplace:
+  
    ```bash
           marketplace install reporting/html
           ```
