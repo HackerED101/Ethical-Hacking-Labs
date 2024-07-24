@@ -120,7 +120,6 @@
 
 Certainly! Here's how you can format the instructions in GitHub Markdown format for your README file:
 
----
 
 ### Generating a Report
 
