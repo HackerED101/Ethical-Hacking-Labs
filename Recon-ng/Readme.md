@@ -192,3 +192,28 @@ This module gathers personal information associated with a domain using WHOIS da
    run
    ```
 
+   #### Gather Contacts Associated with a Domain
+   - We can use profiler to collect information about a person on worldwide internet.
+   - To install and use another module, you have to exit the first one:
+          ```bash
+          back
+          ```
+ - Install the profiler module:
+     ```bash
+   marketplace install recon/profiles-profiles/profiler
+   ```
+
+- Load the profiler module:
+   ```bash
+   modules load recon/domains-contacts/whois_pocs
+   ```
+   
+   - Set the target username:
+   ```bash
+   options set SOURCE MarkZuckerberg
+             ```
+
+   - Run the module:
+   ```bash
+   run
+   ```
